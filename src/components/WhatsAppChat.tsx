@@ -11,9 +11,9 @@ export function WhatsAppChat() {
   // Initialize Tawk.to API
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // @ts-ignore
+      // @ts-expect-error Property 'Tawk_API' does not exist on type 'Window & typeof globalThis'.
       window.Tawk_API = window.Tawk_API || {};
-      // @ts-ignore
+      // @ts-expect-error Property 'Tawk_API' does not exist on type 'Window & typeof globalThis'.
       window.Tawk_API.onLoad = function() {
         console.log('Tawk.to loaded successfully');
       };
@@ -21,8 +21,9 @@ export function WhatsAppChat() {
   }, []);
 
   const openWhatsApp = () => {
+    // Corrected WhatsApp number sanitization: removed backslash
     window.open(
-      `https://wa.me/${whatsappNumber.replace(/\\D/g, '')}?text=Hi%20Tranzit%20Team%21%20I%20need%20help%20with...`,
+      `https://wa.me/${whatsappNumber.replace(/\D/g, '')}?text=Hi%20Tranzit%20Team%21%20I%20need%20help%20with...`,
       '_blank'
     );
   };
@@ -35,9 +36,9 @@ export function WhatsAppChat() {
       openWhatsApp();
     } else if (option === 'bot') {
       if (typeof window !== 'undefined') {
-        // @ts-ignore
+        // @ts-expect-error Property 'Tawk_API' does not exist on type 'Window & typeof globalThis'.
         if (window.Tawk_API) {
-          // @ts-ignore
+          // @ts-expect-error Property 'Tawk_API' does not exist on type 'Window & typeof globalThis'.
           window.Tawk_API.toggle();
         }
       }
