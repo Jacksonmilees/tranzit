@@ -48,6 +48,10 @@ export const metadata: Metadata = {
   publisher: "Tranzit",
   viewport: "width=device-width, initial-scale=1",
   themeColor: "#10B981",
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
