@@ -2,6 +2,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Truck, MapPin, Users, Clock, Shield, Award, BookOpen } from "lucide-react";
+import Image from "next/image";
+import TeamMember from "./TeamMember";
 
 export default function About() {
   return (
@@ -79,37 +81,34 @@ export default function About() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Team Member 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex flex-col items-center">
-                <div className="w-24 h-24 rounded-full bg-gray-200 mb-4 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-tranzit-green" />
-                </div>
-                <h4 className="font-semibold text-gray-900">Jackson Alex</h4>
-                <p className="text-gray-600">Frontend Developer</p>
-              </div>
-            </div>
+            <TeamMember
+              name="Jackson Alex"
+              role="Frontend Developer"
+              imageUrl="/images/jackson.jpg"
+              link="https://jacksonalex.co.ke"
+              linkText="View Portfolio"
+              linkColor="text-tranzit-green"
+            />
 
             {/* Team Member 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex flex-col items-center">
-                <div className="w-24 h-24 rounded-full bg-gray-200 mb-4 flex items-center justify-center">
-                  <Truck className="w-12 h-12 text-tranzit-blue" />
-                </div>
-                <h4 className="font-semibold text-gray-900">Elijah Kibuchi</h4>
-                <p className="text-gray-600">Backend Developer</p>
-              </div>
-            </div>
+            <TeamMember
+              name="Elijah Kibuchi"
+              role="Backend Developer"
+              imageUrl="/images/elijah.jpg"
+              link="https://linkedin.com/in/elijah-kibuchi-999296242"
+              linkText="LinkedIn Profile"
+              linkColor="text-tranzit-blue"
+            />
 
             {/* Team Member 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex flex-col items-center">
-                <div className="w-24 h-24 rounded-full bg-gray-200 mb-4 flex items-center justify-center">
-                  <MapPin className="w-12 h-12 text-tranzit-orange" />
-                </div>
-                <h4 className="font-semibold text-gray-900">Dan</h4>
-                <p className="text-gray-600">Backend Developer</p>
-              </div>
-            </div>
+            <TeamMember
+              name="Dan"
+              role="Backend Developer"
+              imageUrl="/images/dan.jpg"
+              link="https://www.linkedin.com/in/daniel-ngumo-20960127b/"
+              linkText="LinkedIn Profile"
+              linkColor="text-tranzit-orange"
+            />
           </div>
         </div>
       </div>
