@@ -22,6 +22,7 @@ export default function TeamMember({ name, role, imageUrl, link, linkText, linkC
             width={160}
             height={160}
             className="rounded-full object-cover"
+            priority={true}
             style={{ objectFit: 'cover' }}
           />
         </div>
