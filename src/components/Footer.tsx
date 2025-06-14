@@ -40,12 +40,12 @@ export default function Footer() {
   ];
 
   const legal = [
-    { name: "Privacy Policy", href: "#privacy" },
-    { name: "Terms of Service", href: "#terms" },
-    { name: "Cookie Policy", href: "#cookies" },
-    { name: "Refund Policy", href: "#refund" },
-    { name: "Driver Terms", href: "#driver-terms" },
-    { name: "Accessibility", href: "#accessibility" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms of Service", href: "/terms-of-service" },
+    { name: "Cookie Policy", href: "/cookie-policy" },
+    { name: "Refund Policy", href: "/refund-policy" },
+    { name: "Driver Terms", href: "/driver-terms" },
+    { name: "Accessibility", href: "/accessibility" },
   ];
 
   const socialLinks = [

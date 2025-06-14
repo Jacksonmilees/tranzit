@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from 'next/font/google';
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Inter } from 'next/font/google';
 import { TawkTo } from '@/components/TawkTo';
 import { WhatsAppChat } from '@/components/WhatsAppChat';
+import CookieConsent from '@/components/CookieConsent';
 
 // Tawk.to script
 const tawkScript = `var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -29,14 +29,14 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const sans = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const mono = Inter({
+  subsets: ['latin'],
+  variable: '--font-mono',
 });
 
 export const metadata: Metadata = {
@@ -75,11 +75,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <body className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <div className={`min-h-screen flex flex-col ${inter.variable} ${sans.variable} ${mono.variable} font-sans`}>
+          <Header />
+          <CookieConsent />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
         <script dangerouslySetInnerHTML={{ __html: tawkScript }} />
         <WhatsAppChat />
         <TawkTo />
