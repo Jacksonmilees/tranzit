@@ -14,62 +14,79 @@ export default function About() {
             About <span className="text-tranzit-green">Tranzit</span>
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Your trusted partner for fast, reliable, and affordable deliveries across Kenya.
+            Transforming delivery in Kenya with technology and passion.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Mission Card */}
-          <Card className="bg-white shadow-lg">
+          <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <div className="flex flex-col space-y-1">
-                <CardTitle className="text-sm font-medium">Our Mission</CardTitle>
+                <CardTitle className="text-xl">Our Mission</CardTitle>
               </div>
               <Shield className="h-6 w-6 text-tranzit-green" />
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-gray-600">
-                At Tranzit, we're dedicated to revolutionizing the delivery industry in Kenya. 
-                Our mission is to provide fast, reliable, and affordable delivery services 
-                that make your life easier.
-              </p>
+              <div className="space-y-4">
+                <p className="text-gray-600">
+                  At Tranzit, we're dedicated to revolutionizing the delivery industry in Kenya through technology and innovation. 
+                  Our mission is to provide fast, reliable, and affordable delivery services that make your life easier.
+                </p>
+                <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                  <li>Fast delivery within minutes</li>
+                  <li>Real-time tracking</li>
+                  <li>24/7 customer support</li>
+                  <li>Secure payment options</li>
+                </ul>
+              </div>
             </CardContent>
           </Card>
 
           {/* Values Card */}
-          <Card className="bg-white shadow-lg">
+          <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <div className="flex flex-col space-y-1">
-                <CardTitle className="text-sm font-medium">Our Values</CardTitle>
+                <CardTitle className="text-xl">Our Values</CardTitle>
               </div>
               <Award className="h-6 w-6 text-tranzit-blue" />
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-gray-600">
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Customer First</li>
-                  <li>Reliability</li>
-                  <li>Innovation</li>
-                  <li>Transparency</li>
+              <div className="space-y-4">
+                <p className="text-gray-600">
+                  We believe in putting our customers first and delivering exceptional service every time.
+                </p>
+                <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                  <li>Customer First - We prioritize your needs and satisfaction</li>
+                  <li>Reliability - Consistent service you can depend on</li>
+                  <li>Innovation - Always improving through technology</li>
+                  <li>Transparency - Clear communication and honest service</li>
                 </ul>
-              </p>
+              </div>
             </CardContent>
           </Card>
 
           {/* History Card */}
-          <Card className="bg-white shadow-lg">
+          <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <div className="flex flex-col space-y-1">
-                <CardTitle className="text-sm font-medium">Our Journey</CardTitle>
+                <CardTitle className="text-xl">Our Journey</CardTitle>
               </div>
               <BookOpen className="h-6 w-6 text-tranzit-orange" />
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-gray-600">
-                Founded in 2024, Tranzit has quickly become one of Kenya's leading delivery 
-                platforms. With a focus on technology and customer service, we've grown 
-                to serve thousands of customers across 50+ cities.
-              </p>
+              <div className="space-y-4">
+                <p className="text-gray-600">
+                  Founded in 2024, Tranzit has quickly become one of Kenya's leading delivery platforms. 
+                  Our journey has been marked by continuous growth and innovation:
+                </p>
+                <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                  <li>2024 - Launched in Nairobi</li>
+                  <li>2025 - Expanded to 50+ cities</li>
+                  <li>2026 - Introduced driver app</li>
+                  <li>2027 - Launched enterprise solutions</li>
+                </ul>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -79,14 +96,14 @@ export default function About() {
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Meet Our Team
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-white p-6 rounded-xl shadow-lg">
             {/* Team Member 1 */}
             <TeamMember
               name="Jackson Alex"
               role="Frontend Developer"
               imageUrl="/images/jackson.jpg"
-              link="https://jacksonalex.co.ke"
-              linkText="View Portfolio"
+              link="/about"
+              linkText="View Profile"
               linkColor="text-tranzit-green"
             />
 
@@ -95,8 +112,8 @@ export default function About() {
               name="Elijah Kibuchi"
               role="Backend Developer"
               imageUrl="/images/elijah.jpg"
-              link="https://linkedin.com/in/elijah-kibuchi-999296242"
-              linkText="LinkedIn Profile"
+              link="/about"
+              linkText="View Profile"
               linkColor="text-tranzit-blue"
             />
 
